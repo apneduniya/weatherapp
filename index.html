@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading">
+        <h1>Loading...</h1>
+    </div>
+    <div class="container">
+        <div class="data-show-div">
+            <span id="data-celcius">16</span>
+            <span id="data-degree">°</span>
+            <span id="data-city"></span>
+            <span id="data-date-time"></span>
+        </div>
+        <img alt="img" id="bg-img">
+        <div class="side-container">
+            <div class="input-location-div">
+                <div class="input-div">
+                    <input type="text" placeholder="Another location" id="input-location">
+                    <hr>
+                </div>
+                <button class="search-location-button" onclick="data(document.getElementById('input-location').value)"><img src="assets/searchSvg.svg" alt="search-button"></button>
+            </div>
+            <div class="some-popular-cities">
+                <span onclick="data('Mumbai')">Mumbai</span>
+                <span onclick="data('Delhi')">Delhi</span>
+                <span onclick="data('Patna')">Patna</span>
+                <span onclick="data('Chennai')">Chennai</span>
+            </div>
+            <hr>
+            <div class="weather-details">
+                <h2>Weather Details</h2>
+                <div>
+                    <div>
+                        <span>Cloudy</span>
+                        <span id="data-cloudy"></span>
+                    </div>
+                    <div>
+                        <span>Humidity</span>
+                        <span id="data-humidity"></span>
+                    </div>
+                    <div>
+                        <span>Wind</span>
+                        <span id="data-wind-speed"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
